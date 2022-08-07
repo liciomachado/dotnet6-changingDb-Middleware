@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Testes.changeDB.pg.Services;
 
 namespace Testes.changeDB.pg.Controllers
@@ -14,10 +15,10 @@ namespace Testes.changeDB.pg.Controllers
             this.serviceContext = serviceContext;
         }
 
-        [HttpGet("{db}")]
-        public async Task<IActionResult> Get(string db)
+        [HttpGet, Authorize]
+        public async Task<IActionResult> Get()
         {
-            var resp = await serviceContext.Get(db);
+            var resp = await serviceContext.Get();
             return Ok(resp);
         }
     }

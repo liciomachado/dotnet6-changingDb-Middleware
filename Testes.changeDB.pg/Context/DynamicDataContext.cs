@@ -3,9 +3,9 @@ using Testes.changeDB.pg.Model;
 
 namespace Testes.changeDB.pg
 {
-    public class PgDataContext : DbContext
+    public class DynamicDataContext : DbContext
     {
-        public PgDataContext(DbContextOptions<PgDataContext> options) : base(options)
+        public DynamicDataContext(DbContextOptions<DynamicDataContext> options) : base(options)
         {
         }
 
@@ -13,7 +13,8 @@ namespace Testes.changeDB.pg
         {
             modelBuilder.UseSerialColumns();
         }
-        public DbSet<Usuario> Usuarios { get; set; }
+
+        public DbSet<Funcionario> Funcionarios { get; set; }
 
     }
 }

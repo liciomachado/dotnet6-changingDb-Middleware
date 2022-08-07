@@ -1,9 +1,9 @@
-﻿using Testes.changeDB.pg;
+﻿using Testes.changeDB.pg.Model;
 
 namespace Testes.changeDB.pg.Services
 {
     public interface IServiceContext
     {
-        Task<List<Funcionario>> Get(string db);
+        Task<List<Funcionario>> Get();
     }
 }

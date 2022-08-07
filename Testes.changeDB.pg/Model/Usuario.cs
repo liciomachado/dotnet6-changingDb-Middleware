@@ -3,18 +3,20 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Testes.changeDB.pg.Model
 {
-    [Table("funcionarios", Schema = "loja")]
-    public class Funcionario
+    [Table("usuarios", Schema = "Application")]
+    public class Usuario
     {
         [Key]
         [Column("id")]
         public long Id { get; set; }
         [Required]
         [Column("nome")]
-        public string Nome { get; set; }
+        public string Username { get; set; }
         [Required]
-        [Column("sobrenome")]
-        public string Sobrenome { get; set; }
+        [Column("email")]
+        public string Email { get; set; }
+        [Required]
+        [Column("dbempresa")]
+        public string DbCompany { get; set; }
     }
-
 }
