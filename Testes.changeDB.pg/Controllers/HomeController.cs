@@ -8,9 +8,9 @@ namespace Testes.changeDB.pg.Controllers
     [Route("api/[controller]")]
     public class HomeController : ControllerBase
     {
-        private readonly IServiceContext serviceContext;
+        private readonly IFuncionarioService serviceContext;
 
-        public HomeController(IServiceContext serviceContext)
+        public HomeController(IFuncionarioService serviceContext)
         {
             this.serviceContext = serviceContext;
         }

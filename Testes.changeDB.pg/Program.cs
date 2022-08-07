@@ -18,7 +18,7 @@ builder.Services.AddDbContext<PgDataContext>(
 builder.Services.AddDbContext<DynamicDataContext>(
     o => o.UseNpgsql(builder.Configuration.GetConnectionString("DynamicDB"))
 );
-builder.Services.AddScoped<IServiceContext, ServiceContext>();
+builder.Services.AddScoped<IFuncionarioService, FuncionarioService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 
 

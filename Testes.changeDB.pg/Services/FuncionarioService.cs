@@ -3,11 +3,11 @@ using Testes.changeDB.pg.Model;
 
 namespace Testes.changeDB.pg.Services
 {
-    public class ServiceContext : IServiceContext
+    public class FuncionarioService : IFuncionarioService
     {
         private readonly DynamicDataContext _context;
 
-        public ServiceContext(DynamicDataContext context)
+        public FuncionarioService(DynamicDataContext context)
         {
             _context = context;
         }

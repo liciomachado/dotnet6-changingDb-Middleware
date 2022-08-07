@@ -2,7 +2,7 @@
 
 namespace Testes.changeDB.pg.Services
 {
-    public interface IServiceContext
+    public interface IFuncionarioService
     {
         Task<List<Funcionario>> Get();
     }
